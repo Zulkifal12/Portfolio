@@ -1,8 +1,9 @@
-# Muffeez-Portfolio 
+# zulkifal's-portfolio
+
 I have 3 years of experience developing systems, interfaces, bots, and technological solutions to make the web a better place. I am dedicated to writing and refactoring clean, reusable, and scalable code in `Angular, React, NodeJS and ExpressJS and sometimes in Python` applying good practices and development standards.
 
 Click the link below to open my portfolio.
-<https://mufeez1.github.io/muffeez/> 
+<https://mufeez1.github.io/muffeez/>
 
 ## Development server
 

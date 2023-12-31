@@ -22,10 +22,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    /* ArchiveComponent */
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserAnimationsModule,
 
