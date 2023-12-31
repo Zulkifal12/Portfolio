@@ -6,12 +6,12 @@
   "Header.cvBtn": "Resume",
   "Header.cvName": "Zulkifal's_CV.pdf",
   "Banner.Pretitle": "Hello! My name is",
-  "Banner.Description": "I have <span class='underline'>2+ years of experience</span> developing systems, interfaces, bots, and technological solutions to make the web a better place. I am dedicated to writing and refactoring clean, reusable, and scalable code in <span class='underline'>Angular JS, NodeJS</span> and sometimes in <span class='underline'>Python</span> applying good practices and development standards.",
   "Banner.ActionBtn": "Get in touch",
+  "Banner.Description": "A committed MEAN stack developer with <span class='underline'>2+ years of experience</span>  shaping systems, interfaces to elevate the digital realm. Proficient in <span class='underline'>Angular JS, Node.Js , Express.Js, MongoDB</span> , my focus is on producing clean, reusable, and scalable code that adheres to best practices and development standards. My journey involves a passion for continuous improvement and innovation within the MEAN stack. Let's collaborate to create cutting-edge solutions and contribute to making the web a more dynamic and efficient space.",
   "AboutMe.Title": "About me",
   "AboutMe.Paragraphs": [
-    "In my <span class='underline'>2+ years as a developer</span>, I sought to train every day. I have worked on <span class='underline'>Micro Frontend Technologies, Angular Custom Libraries</span>,  writing <span class='underline'>unit tests</span>, <span class='underline'>performing continuous integration</span>, and covered backend developer roles with <span class='underline'>ExpressJS, NestJs, MongoDB and MySQL</span>. I have led teams having empathy, motivating to partners, and collaboratively setting plans and goals together.",
-    "My skills also include implementing system improvements, optimizing sites, standardizing patterns, and suggesting and executing ideas that add value to the project I'm working on.",
+    "In my <span class='underline'>2+ years as a developer</span>, I sought to train every day. I specialize in <span class='underline'> Micro Frontend Technologies, Angular Custom Libraries </span>, and robust <span class='underline'> unit testing</span>. I seamlessly integrate continuous processes and have hands-on experience with Micro-Services backend.",
+    "Beyond technical skills, I excel in leadership, fostering teamwork with empathy and motivation. My focus extends to system improvements, site optimization, and implementing innovative ideas that enhance project value. Let's collaborate to elevate projects in the dynamic realm of the MEAN stack and Micro-Services backend, pushing boundaries and delivering impactful solutions!",
     "Some of the technologies that I have trained and worked on include (but are not limited to):"
   ],
   "Experience.Title": "Experience",
@@ -21,12 +21,11 @@
       "Title": "Frontend Engineer",
       "Date": "June 2023 - Present",
       "Description": [
-        "Developed and maintained a web-based application using Angular, Node.js, and MongoDB, resulting in improved user experience and increased performance.",
+        "Developed and maintained web-based application's using Angular, Node.js, and MongoDB, resulting in improved user experience and increased performance.",
         "Designed and implemented multiple Plugin's to support multiple applications, using Angular Libraries.",
-        "Implementation of continuous integration and daily backups.",
-        "Worked in team of 4 people in the development of a E-Retail Cloud based solution, Flyaway Hub.",
-        "Used Git, AWS Codecommit for Version Controlling.",
-        "Planning meetings in reports."
+        "Aeeset DevOps team for the Implementation of continuous integration and daily backups.",
+        "Working in team of 16 people and leading a team of 4 Junior Developer's.",
+        "Useing Git, AWS Codecommit for Version Controlling."
       ]
     },
 
@@ -36,11 +35,11 @@
       "Date": "May 2021 - June 2022",
       "Description": [
         "Developed and maintained web applications using Angular.",
-        "Coding of API requests with RxJS using HTTP modules.",
-        "Creation of modules with complex reactive forms",
+        "Integrated REST API's with Web application using HTTP modules.",
+        "Developed custom complex reactive forms for colleting user responses.",
         "Improved website performance by optimizing images and implementing caching techniques.",
         "Collaborated with designers and back-end developers to create responsive and user-friendly web experiences",
-        "Lead a team of 4 Angular Interns, providing them with training and support."
+        "Worked in the team of 8 seniour's Devloper's."
       ]
     },
     {
@@ -48,14 +47,12 @@
       "Title": "Independent",
       "Date": "March 2020 - Present",
       "Description": [
-        "Implementing continuous improvements, working on frontend and backend.",
-        "Creating platforms with Angular, Nodejs,reactive, and object-oriented programming paradigms.",
-        "Automation of processes with data structures.",
-        "Design layout with SASS, Bootstrap, Materialize, Prime Faces, etc."
+        "Developed different website's for client's accross the world.",
+        "Design layout with HTML, CSS, SASS, Bootstrap, Angular Material's etc."
       ]
     }
   ],
-  "FeatureProjects.Title": "Projects that I was a part of",
+  "FeatureProjects.Title": "My Involvement in Ongoing and Completed Projects:",
   "FeatureProjects.Label": "Featured Project",
   "FeatureProjects.Projects": [
     {
@@ -114,29 +111,51 @@
       "Technologies": ["Angular", "Bootstrap", "CSS"]
     }
   ],
-  "OtherProjects.Title": "More personal projects",
+  "OtherProjects.Title": "Personal Projects",
   "OtherProjects.Projects": [
     {
-      "Title": "Covid Tracker",
-      "Description": "Covid Tracker is a web app which is built using the 3rd Party Api integration. This app shows the records from worldwise and countrywise that shows the who much patient are suffer from covid who many died from covid and how many are recoverd from covid",
-
-      "Technologies": ["Angular", "ChartJs", "API", "Bootstrap"]
+      "Title": "Titan Elite Properties",
+      "Description": "A web based application for Properties dealing and renting.",
+      "ghLink": "https://github.com/Zulkifal12/Titan-Elite-Properties",
+      "demoLink": "https://maxgoproperties.000webhostapp.com/",
+      "Technologies": [
+        "Angular",
+        "Angular Material",
+        "API's",
+        "Bootstrap",
+        "Service Worker's"
+      ]
     },
     {
-      "Title": "Quiz App",
-      "Description": "A single page quiz app that has a minimal design, that has different level to attempt quizes.",
+      "Title": "Economics Indicator",
+      "Description": "A advanced indicator web application for Stock Exchange.",
+      "ghLink": "https://github.com/Zulkifal12/Trading-Econmics",
+      "demoLink": "https://tradingeconomics.000webhostapp.com/",
 
-      "Technologies": ["Angular", "Bootstrap", "3rd Party Library"]
+      "Technologies": [
+        "Angular",
+        "Bootstrap",
+        "API's",
+        "Chart.js",
+        "Service Worker's"
+      ]
     },
     {
-      "Title": "JWT Integration",
-      "Description": "JWT authentication in Node Js with MsSQL",
-
-      "Technologies": ["Angular", "JWT", "ExpressJS"]
+      "Title": "E-Commerce",
+      "Description": "E-commerce web application for selling products.",
+      "ghLink": "https://github.com/Zulkifal12/E-Commerce",
+      "demoLink": "",
+      "Technologies": [
+        "Angular",
+        "Bootstrap",
+        "API's",
+        "Chart.js",
+        "Service Worker's"
+      ]
     }
   ],
   "Contact.Pretitle": "What’s Next",
   "Contact.Title": "Get in touch!",
-  "Contact.Content": "I will be happy to receive your contact if you want to talk about new opportunities. Write me, and I will reply as soon as I see your message. Simple one-page design that features a profile letter with basic information about a person.",
+  "Contact.Content": "I will be happy to receive your contact if you want to talk about new opportunities. Write me, and I will reply as soon as I see your message.",
   "Contact.Btn": "Say Hello"
 }
