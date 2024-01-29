@@ -7,141 +7,139 @@
           {{ "AboutMe.Title" | translate }}
         </h3>
       </div>
-      <div class="row">
-        <div class="col-12 col-md-6 mb-4 mb-md-0">
-          <div class="about-description">
-            <p
-              *ngFor="let text of 'AboutMe.Paragraphs' | translate"
-              [innerHTML]="text"
+      <div class="d-flex">
+        <div class="about-description">
+          <p
+            *ngFor="let text of 'AboutMe.Paragraphs' | translate"
+            [innerHTML]="text"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          ></p>
+
+          <ul class="skills-list" data-aos="fade-up">
+            <li
+              class="skill-element"
               data-aos="fade-up"
               data-aos-duration="1000"
-            ></p>
-            <ul class="skills-list" data-aos="fade-up">
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">Angular JS </span>
-              </li>
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">JavaScript, TypeScript </span>
-              </li>
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">HTML &amp; (S)CSS </span>
-              </li>
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">RxJS, Redux, NgXs </span>
-              </li>
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">Bootstrap, Angular Material </span>
-              </li>
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">AG-Grid </span>
-              </li>
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">Service Worker's </span>
-              </li>
+            >
+              <span class="underline">Angular JS </span>
+            </li>
+            <li
+              class="skill-element"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span class="underline">JavaScript, TypeScript </span>
+            </li>
+            <li
+              class="skill-element"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span class="underline">HTML &amp; (S)CSS </span>
+            </li>
+            <li
+              class="skill-element"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span class="underline">RxJS, Redux, NgXs </span>
+            </li>
+            <li
+              class="skill-element"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span class="underline">Bootstrap, Angular Material </span>
+            </li>
+            <li
+              class="skill-element"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span class="underline">AG-Grid </span>
+            </li>
+            <li
+              class="skill-element"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span class="underline">Service Worker's </span>
+            </li>
 
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">NodeJS </span>
-              </li>
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">ExpressJS </span>
-              </li>
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">MongoDB </span>
-              </li>
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">Jasmine / Karma (TDD) </span>
-              </li>
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">CI / CD </span>
-              </li>
+            <li
+              class="skill-element"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span class="underline">NodeJS </span>
+            </li>
+            <li
+              class="skill-element"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span class="underline">ExpressJS </span>
+            </li>
+            <li
+              class="skill-element"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span class="underline">MongoDB </span>
+            </li>
+            <li
+              class="skill-element"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span class="underline">Jasmine / Karma (TDD) </span>
+            </li>
+            <li
+              class="skill-element"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span class="underline">CI / CD </span>
+            </li>
 
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">Scrum and Agile Methodologies </span>
-              </li>
-              <li
-                class="skill-element"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <span class="underline">Jira (Scrum) </span>
-              </li>
-            </ul>
-          </div>
+            <li
+              class="skill-element"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span class="underline">Scrum and Agile Methodologies </span>
+            </li>
+            <li
+              class="skill-element"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span class="underline">Jira (Scrum) </span>
+            </li>
+          </ul>
         </div>
-        <div
-          class="col-12 col-md-6 mt-4 mt-md-0 text-center"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
-          <div class="about-img-container">
-            <img
-              (click)="
-                analyticsService.sendAnalyticEvent(
-                  'click_image',
-                  'about',
-                  'image'
-                )
-              "
-              width="400"
-              height="400"
-              src="https://static.vecteezy.com/system/resources/previews/011/153/364/original/3d-website-developer-working-on-laptop-illustration-png.png"
-              alt="Git User"
-            />
-          </div>
+        <div class="myimage about-img-container">
+          <img
+            (click)="
+              analyticsService.sendAnalyticEvent(
+                'click_image',
+                'about',
+                'image'
+              )
+            "
+            width="400"
+            height="400"
+            src="https://static.vecteezy.com/system/resources/previews/011/153/364/original/3d-website-developer-working-on-laptop-illustration-png.png"
+            alt="Git User"
+          />
         </div>
       </div>
+      <div
+        class="col-12 col-md-6 mt-4 mt-md-0 text-center"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      ></div>
     </div>
   </div>
 </section>
