@@ -17,7 +17,7 @@
       .myimage img {
         border-radius: 50%;
 
-        --color: #fa6900; /* the color of the border */
+        --color: #ecb707; /* the color of the border */
         --border: 10px; /* the thickness of the border */
         --offset: 30px; /* control the movement of the border */
         --gap: 5px; /* the gap on hover */
@@ -54,7 +54,7 @@
       }
 
       h1 {
-        color: #64ffda;
+        color: #ffffff;
         margin: 0 0 20px 3px;
         font-size: 16px;
         font-weight: normal;
@@ -70,14 +70,14 @@
         font-family: $MainFont;
         background: linear-gradient(
           120deg,
-          #50efb5,
-          #8ff4ca,
-          #e69e4c,
-          #e69e4c,
-          #e69e4c,
-          #e69e4c,
-          #eeff41,
-          #f9a825,
+          #c7c2b1,
+          #c7c2b1,
+          #bdab70,
+          #ecb707,
+          #ecb707,
+          #ecb707,
+          #ecb707,
+          #ecb707,
           #ff5722
         );
         color: #fff;
