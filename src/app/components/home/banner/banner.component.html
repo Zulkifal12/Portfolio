@@ -2,39 +2,42 @@
   <div [@bannerTrigger] class="container">
     <div class="section-box-banner">
       <div class="content">
-        <div>
-          <h1>Hello! My name is</h1>
-        </div>
-
-        <div class="banner-title">
-          <h2>Muhammad Zulkifal</h2>
-          <h3>MEAN Stack Developer</h3>
-        </div>
-        <div class="d-flex justify-content-between">
-          <div class="banner-description">
-            <p [innerHTML]="'Banner.Description' | translate" class="mt-4"></p>
+        <div class="my-content">
+          <div>
+            <h1>Hello! My name is</h1>
           </div>
-          <div class="myimage">
-            <img src="../../../../assets/images/me/MyImage.jpg" alt="" />
+          <div class="banner-title">
+            <h2>Muhammad Zulkifal</h2>
+            <h3>MEAN Stack Developer</h3>
+          </div>
+          <div class="d-flex justify-content-between">
+            <div class="banner-description">
+              <p
+                [innerHTML]="'Banner.Description' | translate"
+                class="mt-4"
+              ></p>
+            </div>
+          </div>
+          <div class="div-btn-banner">
+            <a
+              (click)="
+                analyticsService.sendAnalyticEvent(
+                  'click_send_mail',
+                  'banner',
+                  'email'
+                )
+              "
+              href="mailto:mzulkifaluetp@gmail.com"
+              target="_black"
+              class="main-btn"
+            >
+              {{ "Banner.ActionBtn" | translate }}
+            </a>
           </div>
         </div>
-      </div>
-
-      <div class="div-btn-banner">
-        <a
-          (click)="
-            analyticsService.sendAnalyticEvent(
-              'click_send_mail',
-              'banner',
-              'email'
-            )
-          "
-          href="mailto:mzulkifaluetp@gmail.com"
-          target="_black"
-          class="main-btn"
-        >
-          {{ "Banner.ActionBtn" | translate }}
-        </a>
+        <div class="myimage">
+          <img src="../../../../assets/images/me/MyImage.jpg" alt="" />
+        </div>
       </div>
     </div>
   </div>

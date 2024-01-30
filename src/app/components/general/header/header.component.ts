@@ -45,7 +45,6 @@ export class HeaderComponent implements OnInit {
   pageYPosition: number;
   languageFormControl: FormControl = new FormControl();
   cvName: string = "";
-
   constructor(
     private router: Router,
     public analyticsService: AnalyticsService,

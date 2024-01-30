@@ -9,10 +9,24 @@
 
     .section-box-banner {
       display: table-cell;
-      vertical-align: middle;
 
       .content {
-        margin-top: 98px;
+        margin-top: 48px;
+        display: flex;
+        .banner-description {
+          p {
+            text-align: justify;
+          }
+        }
+      }
+      .myimage {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        justify-content: end;
+        img {
+          width: 80%;
+        }
       }
       .myimage img {
         border-radius: 50%;
@@ -64,7 +78,7 @@
       h2,
       h3 {
         font-weight: 600;
-        font-size: 80px;
+        font-size: 60px;
         line-height: 1.1;
         margin: 0;
         font-family: $MainFont;
@@ -94,17 +108,63 @@
         color: $Slate;
       }
 
-      .banner-description {
-        margin-bottom: 60px;
-      }
-
       p {
         max-width: 600px;
       }
 
       .div-btn-banner {
+        margin-top: 30px;
         height: 43px;
       }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .my-content {
+    z-index: 2;
+  }
+  .myimage {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    justify-content: unset !important;
+    opacity: 0.1;
+    margin-top: 100px;
+    z-index: 1;
+    img {
+      height: 60%;
+    }
+  }
+  .section-box-banner {
+    h3,
+    h2 {
+      font-size: 53px !important;
+    }
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .my-content {
+    z-index: 2;
+    position: relative;
+  }
+  .myimage {
+    width: 70% !important;
+    height: 100% !important;
+    position: absolute;
+    justify-content: unset !important;
+    opacity: 0.1;
+    margin-top: 100px;
+    z-index: 1;
+    img {
+      width: 100% !important;
+      height: 60%;
+    }
+  }
+  .section-box-banner {
+    h3,
+    h2 {
+      font-size: 53px !important;
     }
   }
 }
