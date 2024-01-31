@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href /muffeez/ && ngh --dir=dist/zulkifal's-portfolio "
+    "deploy": "ng build --prod --dir=dist/zulkifal's-portfolio "
   },
   "private": true,
   "dependencies": {
