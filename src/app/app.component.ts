@@ -24,12 +24,12 @@ export class AppComponent implements OnInit {
       {
         name: "keywords",
         content:
-          "Frontend, MEAN Stack Developer, Software Engineer, software, developer",
+          "Frontend, Django, Software Engineer, software, developer",
       },
       {
         name: "description",
         content:
-          "As a software engineer with expertise in MEAN stack, I have a comprehensive understanding of full-stack web development. My strong foundation in JavaScript allows me to effectively work with front-end technologies such as Angular, as well as back-end technologies such as Node.js and Express.",
+          "As a software engineer with expertise in Angular and Django, I have a comprehensive understanding of full-stack web development. My strong foundation in JavaScript allows me to effectively work with front-end technologies such as Angular, as well as back-end technologies such as Django.",
       },
     ]);
 

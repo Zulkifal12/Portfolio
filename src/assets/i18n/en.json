@@ -7,7 +7,7 @@
   "Header.cvName": "Zulkifal's_CV.pdf",
   "Banner.Pretitle": "Hello! My name is",
   "Banner.ActionBtn": "Get in touch",
-  "Banner.Description": "A committed MEAN stack developer with <span class='underline'>2+ years of experience</span>  shaping systems, interfaces to elevate the digital realm. Proficient in <span class='underline'>Angular JS, Node.Js , Express.Js, MongoDB</span> , my focus is on producing clean, reusable, and scalable code that adheres to best practices and development standards. My journey involves a passion for continuous improvement and innovation within the MEAN stack. Let's collaborate to create cutting-edge solutions and contribute to making the web a more dynamic and efficient space.",
+  "Banner.Description": "A committed MEAN stack developer with <span class='underline'>2+ years of experience</span>  shaping systems, interfaces to elevate the digital realm. Proficient in <span class='underline'>Angular and Django</span> , my focus is on producing clean, reusable, and scalable code that adheres to best practices and development standards. My journey involves a passion for continuous improvement and innovation within the MEAN stack. Let's collaborate to create cutting-edge solutions and contribute to making the web a more dynamic and efficient space.",
   "AboutMe.Title": "About me",
   "AboutMe.Paragraphs": [
     "In my <span class='underline'>2+ years as a developer</span>, I sought to train every day. I specialize in <span class='underline'> Micro Frontend Technologies, Angular Custom Libraries </span>, and robust <span class='underline'> unit testing</span>. I seamlessly integrate continuous processes and have hands-on experience with Micro-Services backend.",
@@ -17,7 +17,19 @@
   "Experience.Title": "Experience",
   "Experience.Jobs": [
     {
-      "Tab": "SMSAMI",
+      "Tab": "Uurnik Systems",
+      "Title": "Angular Developer",
+      "Date": "April 2024 - Present (Remote)",
+      "Description": [
+        "Developed and maintained web-based application's using Angular, Django, and MySQL, resulting in improved user experience and increased performance.",
+        "Designed and implemented multiple Plugin's to support multiple applications, using Angular Libraries.",
+        "Aeeset DevOps team for the Implementation of continuous integration and daily backups.",
+        "Working in team of 26 people and leading a team of 2 Junior Developer's.",
+        "Useing Git, for Version Controlling."
+      ]
+    },
+    {
+      "Tab": "Smsami",
       "Title": "Frontend Engineer",
       "Date": "June 2023 - Present",
       "Description": [
