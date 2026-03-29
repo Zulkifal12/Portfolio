@@ -1,170 +1,525 @@
 @import "./../../../../variables.scss";
 
 .banner {
+  position: relative;
+  isolation: isolate;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5.5rem max(1.25rem, 4vw) 4rem;
+  overflow: hidden;
 
-  .container {
-    display: table;
-    height: 100vh;
-
-    .section-box-banner {
-      display: table-cell;
-
-      .content {
-        margin-top: 48px;
-        display: flex;
-        .banner-description {
-          p {
-            text-align: justify;
-          }
-        }
-      }
-      .myimage {
-        width: 50%;
-        height: 50%;
-        display: flex;
-        justify-content: end;
-        img {
-          width: 80%;
-        }
-      }
-      .myimage img {
-        border-radius: 50%;
-
-        --color: #ecb707; /* the color of the border */
-        --border: 10px; /* the thickness of the border */
-        --offset: 30px; /* control the movement of the border */
-        --gap: 5px; /* the gap on hover */
-
-        border-radius: 50%;
-        cursor: pointer;
-        padding: calc(var(--border) + var(--gap));
-        border: var(--offset) solid #0000;
-        --_m: radial-gradient(
-          50% 50%,
-          #000 calc(100% - var(--offset)),
-          #0000 calc(100% - var(--border))
-        );
-        -webkit-mask: var(--_m);
-        mask: var(--_m);
-        --_g: #0000 calc(99% - var(--border)),
-          var(--color) calc(100% - var(--border)) 99%, #0000;
-        --_s: var(--offset);
-        --_r: 100% 100% at;
-        background: radial-gradient(var(--_r) 0 0, var(--_g))
-            calc(100% + var(--_s)) calc(100% + var(--_s)),
-          radial-gradient(var(--_r) 100% 0, var(--_g)) calc(0% - var(--_s))
-            calc(100% + var(--_s)),
-          radial-gradient(var(--_r) 0 100%, var(--_g)) calc(100% + var(--_s))
-            calc(0% - var(--_s)),
-          radial-gradient(var(--_r) 100% 100%, var(--_g)) calc(0% - var(--_s))
-            calc(0% - var(--_s));
-        background-size: 50% 50%;
-        background-repeat: no-repeat;
-        transition: 0.4s;
-        &:hover {
-          --_s: 0px;
-        }
-      }
-
-      h1 {
-        color: #ffffff;
-        margin: 0 0 20px 3px;
-        font-size: 16px;
-        font-weight: normal;
-        font-family: $CodeFont;
-      }
-
-      h2,
-      h3 {
-        font-weight: 600;
-        font-size: 60px;
-        line-height: 1.1;
-        margin: 0;
-        font-family: $MainFont;
-        background: linear-gradient(
-          120deg,
-          #c7c2b1,
-          #c7c2b1,
-          #bdab70,
-          #ecb707,
-          #ecb707,
-          #ecb707,
-          #ecb707,
-          #ecb707,
-          #ff5722
-        );
-        color: #fff;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      h2 {
-        color: $LightestSlate;
-      }
-
-      h3 {
-        color: $Slate;
-      }
-
-      p {
-        max-width: 600px;
-      }
-
-      .div-btn-banner {
-        margin-top: 30px;
-        height: 43px;
-      }
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .my-content {
-    z-index: 2;
-  }
-  .myimage {
-    width: 100% !important;
-    height: 100% !important;
-    position: absolute;
-    justify-content: unset !important;
-    opacity: 0.1;
-    margin-top: 100px;
-    z-index: 1;
-    img {
-      height: 60%;
-    }
-  }
-  .section-box-banner {
-    h3,
-    h2 {
-      font-size: 53px !important;
-    }
-  }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  .my-content {
-    z-index: 2;
+  .banner__container {
     position: relative;
-  }
-  .myimage {
-    width: 70% !important;
-    height: 100% !important;
-    position: absolute;
-    justify-content: unset !important;
-    opacity: 0.1;
-    margin-top: 100px;
     z-index: 1;
-    img {
-      width: 100% !important;
-      height: 60%;
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .section-box-banner {
+    width: 100%;
+  }
+
+  .banner__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
+    gap: clamp(2rem, 5vw, 4.5rem);
+    align-items: start;
+    width: 100%;
+  }
+
+  .banner__main {
+    min-width: 0;
+  }
+
+  .my-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .banner-eyebrow {
+    margin: 0 0 0.75rem;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+    font-weight: normal;
+    font-family: $CodeFont;
+    letter-spacing: 0.08em;
+    text-transform: none;
+  }
+
+  .banner-title {
+    margin: 0;
+    width: 100%;
+  }
+
+  .banner-name {
+    font-weight: 600;
+    font-size: clamp(2.5rem, 5.2vw, 4rem);
+    line-height: 1.05;
+    margin: 0;
+    font-family: $MainFont;
+    letter-spacing: -0.02em;
+    background: linear-gradient(
+      120deg,
+      #c7c2b1,
+      #c7c2b1,
+      #bdab70,
+      #ecb707,
+      #ecb707,
+      #ecb707,
+      #ecb707,
+      #ecb707,
+      #ff5722
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $LightestSlate;
+  }
+
+  .banner-tagline {
+    margin: 1.15rem 0 0;
+    font-family: $CodeFont;
+    font-size: clamp(0.9rem, 1.65vw, 1.0625rem);
+    color: $Green;
+    letter-spacing: 0.05em;
+    max-width: none;
+    line-height: 1.55;
+  }
+
+  .banner-description {
+    margin: 1.75rem 0 0;
+    max-width: 38rem;
+    font-size: clamp(1.02rem, 1.65vw, 1.15rem);
+    line-height: 1.72;
+    color: rgba(255, 255, 255, 0.88);
+    text-align: left;
+  }
+
+  .banner-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem 1.5rem;
+    width: 100%;
+    max-width: 36rem;
+    margin: 2rem 0 0;
+    padding: 1.35rem 0;
+    border-top: 1px solid rgba(236, 183, 7, 0.15);
+    border-bottom: 1px solid rgba(236, 183, 7, 0.1);
+  }
+
+  .banner-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    text-align: left;
+    padding: 0;
+  }
+
+  .banner-stat__value {
+    font-family: $CodeFont;
+    font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+    font-weight: 600;
+    color: $Green;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  .banner-stat__label {
+    font-family: $CodeFont;
+    font-size: clamp(0.68rem, 1.05vw, 0.78rem);
+    line-height: 1.4;
+    color: rgba(180, 189, 212, 0.9);
+    letter-spacing: 0.03em;
+    max-width: 11rem;
+  }
+
+  .banner-stack {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 40rem;
+  }
+
+  .banner-stack__label {
+    margin: 0 0 0.85rem;
+    font-family: $CodeFont;
+    font-size: 0.875rem;
+    color: rgba(136, 146, 176, 0.95);
+    letter-spacing: 0.05em;
+  }
+
+  .banner-stack__chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.55rem 0.65rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      font-family: $CodeFont;
+      font-size: 0.8125rem;
+      line-height: 1;
+      padding: 0.5rem 0.85rem;
+      border: 1px solid rgba(236, 183, 7, 0.28);
+      border-radius: 3px;
+      color: rgba(230, 241, 255, 0.9);
+      background: rgba(0, 0, 0, 0.2);
+      letter-spacing: 0.02em;
+      transition: border-color 0.2s ease, color 0.2s ease,
+        background-color 0.2s ease;
+
+      &:hover {
+        border-color: rgba(236, 183, 7, 0.55);
+        color: $Green;
+        background: rgba(236, 183, 7, 0.06);
+      }
     }
   }
-  .section-box-banner {
-    h3,
-    h2 {
-      font-size: 53px !important;
+
+  .div-btn-banner {
+    margin-top: 2.35rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem 1.25rem;
+  }
+
+  .banner-btn-secondary {
+    color: $LightSlate;
+    background-color: transparent;
+    border: 1px solid rgba(136, 146, 176, 0.45);
+    border-radius: 3px;
+    font-size: 13px;
+    font-family: $CodeFont;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 1.25rem 1.75rem;
+
+    &:hover,
+    &:focus-visible {
+      color: $Green;
+      border-color: $Green;
+      background-color: rgba(236, 183, 7, 0.06);
     }
+  }
+
+  /* —— Right column —— */
+  .banner__aside {
+    position: relative;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    padding: 0;
+  }
+
+  .banner__aside-bg {
+    position: absolute;
+    inset: -8% -12% 20% 8%;
+    background: radial-gradient(
+      ellipse 90% 70% at 70% 35%,
+      rgba(236, 183, 7, 0.09) 0%,
+      transparent 65%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .banner__terminal {
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(236, 183, 7, 0.22);
+    background: linear-gradient(
+      165deg,
+      rgba(8, 12, 22, 0.92) 0%,
+      rgba(5, 7, 13, 0.96) 100%
+    );
+    box-shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.75),
+      0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  }
+
+  @media (min-width: 992px) {
+    .banner__terminal {
+      /* Match snapshot.ts window top to .banner-tagline (eyebrow + name + tagline margin-top) */
+      margin-top: calc(
+        (clamp(0.9375rem, 1.5vw, 1.0625rem) * 1.35) + 0.75rem +
+          (clamp(2.5rem, 5.2vw, 4rem) * 1.05) + 1.15rem
+      );
+    }
+  }
+
+  .banner__terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 1rem;
+    background: rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(236, 183, 7, 0.12);
+  }
+
+  .banner__terminal-dots {
+    display: flex;
+    gap: 6px;
+
+    span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+
+      &:nth-child(1) {
+        background: #ff5f56;
+      }
+      &:nth-child(2) {
+        background: #ffbd2e;
+      }
+      &:nth-child(3) {
+        background: #27c93f;
+      }
+    }
+  }
+
+  .banner__terminal-filename {
+    font-family: $CodeFont;
+    font-size: 11px;
+    color: rgba(180, 189, 212, 0.85);
+    letter-spacing: 0.04em;
+  }
+
+  .banner__terminal-body {
+    padding: 1.1rem 1.15rem 1.25rem;
+    font-family: $CodeFont;
+    font-size: clamp(11px, 1.15vw, 13px);
+    line-height: 1.65;
+    color: rgba(220, 228, 245, 0.92);
+
+    p {
+      margin: 0 0 0.15rem;
+    }
+  }
+
+  .banner__code-indent {
+    padding-left: 1rem;
+  }
+
+  .banner__code-kw {
+    color: #c792ea;
+  }
+
+  .banner__code-name {
+    color: #82aaff;
+  }
+
+  .banner__code-str {
+    color: #c3e88d;
+  }
+
+  .banner__code-num {
+    color: #f78c6c;
+  }
+
+  .banner__code-op {
+    color: rgba(180, 189, 212, 0.75);
+  }
+
+  .banner__code-br {
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .banner__code-cmt {
+    color: rgba(136, 146, 176, 0.65);
+    font-style: italic;
+  }
+
+  .banner__aside-card {
+    position: relative;
+    z-index: 1;
+    padding: 1rem 1.15rem;
+    border-radius: 8px;
+    border: 1px solid rgba(236, 183, 7, 0.18);
+    background: rgba(5, 7, 13, 0.65);
+    backdrop-filter: blur(8px);
+  }
+
+  .banner__aside-card-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .banner__pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $Green;
+    box-shadow: 0 0 0 0 rgba(236, 183, 7, 0.45);
+    animation: banner-pulse 2.2s ease-out infinite;
+  }
+
+  .banner__aside-badge {
+    font-family: $CodeFont;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: $LightestSlate;
+    letter-spacing: 0.02em;
+  }
+
+  .banner__aside-meta {
+    margin: 0.5rem 0 0;
+    padding-left: 1.35rem;
+    font-family: $CodeFont;
+    font-size: 0.72rem;
+    color: $Slate;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+  }
+
+  .banner__aside-watermark {
+    position: absolute;
+    bottom: 6%;
+    right: 2%;
+    margin: 0;
+    font-family: $MainFont;
+    font-size: clamp(4.5rem, 12vw, 7rem);
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(236, 183, 7, 0.04);
+    letter-spacing: -0.06em;
+    pointer-events: none;
+    z-index: 0;
+    user-select: none;
+  }
+}
+
+@keyframes banner-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(236, 183, 7, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(236, 183, 7, 0);
+  }
+}
+
+.banner__glow {
+  position: absolute;
+  inset: -35% -15% auto -20%;
+  height: 110%;
+  max-height: 960px;
+  background: radial-gradient(
+      ellipse 65% 52% at 22% 44%,
+      rgba(236, 183, 7, 0.18) 0%,
+      rgba(236, 183, 7, 0.06) 45%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 55% 48% at 78% 48%,
+      rgba(236, 183, 7, 0.1) 0%,
+      transparent 62%
+    ),
+    radial-gradient(
+      ellipse 40% 42% at 88% 58%,
+      rgba(17, 36, 64, 0.5) 0%,
+      transparent 58%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.banner__grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.032) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.032) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(
+    ellipse 130% 100% at 48% 48%,
+    black 0%,
+    rgba(0, 0, 0, 0.65) 55%,
+    transparent 92%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 130% 100% at 48% 48%,
+    black 0%,
+    rgba(0, 0, 0, 0.65) 55%,
+    transparent 92%
+  );
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.75;
+}
+
+@media (max-width: 991px) {
+  .banner {
+    .banner__layout {
+      grid-template-columns: 1fr;
+      gap: 2.75rem;
+    }
+
+    .banner__aside {
+      max-width: 420px;
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    .banner__aside-watermark {
+      right: 0;
+      bottom: 2%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+
+    .banner-description {
+      max-width: none;
+    }
+
+    .banner-stats {
+      grid-template-columns: 1fr;
+      gap: 1.1rem;
+      max-width: 100%;
+    }
+
+    .banner-stat {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .banner-stat__label {
+      max-width: none;
+    }
+
+    .banner__aside {
+      max-width: none;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    padding-top: 4.75rem;
   }
 }

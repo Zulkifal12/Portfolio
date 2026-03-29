@@ -1,6 +1,6 @@
 <footer>
   <div [@animateFooter]>
-    <ul class="footer-left-bar d-none d-md-block">
+    <ul class="footer-left-bar d-none">
       <li>
         <a
           (click)="
@@ -32,7 +32,7 @@
         </a>
       </li>
     </ul>
-    <div class="footer-right-bar d-none d-md-block">
+    <div class="footer-right-bar d-none">
       <a
         (click)="
           analyticsService.sendAnalyticEvent(

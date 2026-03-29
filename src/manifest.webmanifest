@@ -1,6 +1,7 @@
 {
   "name": "zulkifal's-portfolio",
   "short_name": "zulkifal's-portfolio",
+  "lang": "en",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",

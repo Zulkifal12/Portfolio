@@ -1,9 +1,7 @@
 import {
   Component,
   OnInit,
-  ViewChild,
   HostListener,
-  AfterViewInit,
 } from "@angular/core";
 import { Router } from "@angular/router";
 import {
@@ -16,9 +14,6 @@ import {
 } from "@angular/animations";
 import { AnalyticsService } from "src/app/services/analytics/analytics.service";
 import { TranslateService } from "@ngx-translate/core";
-import { FormControl } from "@angular/forms";
-import { LanguageService } from "src/app/services/language/language.service";
-import { ThisReceiver } from "@angular/compiler";
 
 @Component({
   selector: "app-header",
@@ -43,21 +38,15 @@ import { ThisReceiver } from "@angular/compiler";
 export class HeaderComponent implements OnInit {
   responsiveMenuVisible: Boolean = false;
   pageYPosition: number;
-  languageFormControl: FormControl = new FormControl();
   cvName: string = "";
+
   constructor(
     private router: Router,
     public analyticsService: AnalyticsService,
-    public languageService: LanguageService
+    private translate: TranslateService
   ) {}
 
-  ngOnInit(): void {
-    this.languageFormControl.valueChanges.subscribe((val) =>
-      this.languageService.changeLanguage(val)
-    );
-
-    this.languageFormControl.setValue(this.languageService.language);
-  }
+  ngOnInit(): void {}
 
   scroll(el) {
     if (document.getElementById(el)) {
@@ -73,25 +62,15 @@ export class HeaderComponent implements OnInit {
   }
 
   downloadCV() {
-    this.languageService.translateService
-      .get("Header.cvName")
-      .subscribe((val) => {
-        this.cvName = val;
-        console.log(val);
-        // app url
-        let url = window.location.href;
-
-        // Open a new window with the CV
-        window.open(url + "/../assets/cv/" + this.cvName, "_blank");
-      });
+    this.translate.get("Header.cvName").subscribe((val) => {
+      this.cvName = val;
+      const url = window.location.href;
+      window.open(url + "/../assets/cv/" + this.cvName, "_blank");
+    });
   }
 
   @HostListener("window:scroll", ["getScrollPosition($event)"])
   getScrollPosition(event) {
     this.pageYPosition = window.pageYOffset;
-  }
-
-  changeLanguage(language: string) {
-    this.languageFormControl.setValue(language);
   }
 }

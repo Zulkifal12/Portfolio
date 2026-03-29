@@ -1,53 +1,39 @@
 @import "./../../../../variables.scss";
 
 .about {
-  .about-description {
-    margin-top: 30px;
-    max-width: 500px;
-    p {
-      text-align: justify;
-    }
+  .about__content {
+    max-width: 720px;
   }
 
-  .about-img-container {
-    width: 324px;
-    margin: auto;
+  .about-description {
+    margin-top: 0;
 
-    &:after {
-      content: "";
-      // border: 2px solid $Green;
-      z-index: 0;
-      display: block;
-      position: relative;
-      width: 300px;
-      height: 300px;
-      border-radius: 3px;
-      bottom: 290px;
-      left: 23px;
-    }
-
-    img {
-      z-index: 2;
-      // position: relative;
+    p {
+      text-align: left;
+      line-height: 1.65;
+      color: $Slate;
+      margin-bottom: 1.1rem;
     }
   }
 
   .skills-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
-    overflow: hidden;
-    padding: 0;
-    margin: 20px 0 0 0;
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 0.35rem 1.25rem;
+    overflow: visible;
+    padding: 1.25rem 0 0;
+    margin: 0;
     list-style: none;
   }
 
   .skill-element {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     padding-left: 20px;
     font-size: 13px;
     font-family: $CodeFont;
     color: $Slate;
+
     span {
       padding-bottom: 5px;
     }
@@ -63,70 +49,10 @@
   }
 }
 
-@media (min-width: 992px) and (max-width: 1300px) {
-  .about-img-container {
-    margin-left: auto;
-    margin-right: 0;
-  }
-}
-
 @media (max-width: 500px) {
   .about {
-    .about-img-container img {
-      width: 200px;
-      height: 200px;
-    }
-    .about-img-container:after {
-      width: 200px;
-      height: 200px;
-      bottom: 190px;
-      left: 74px;
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  .about {
-    .about-img-container {
-      width: 100%;
-
-      img {
-        width: 180px;
-        height: 180px;
-      }
-
-      &:after {
-        display: none;
-      }
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .about-description {
-    z-index: 2;
-  }
-  .about-img-container {
-    width: 100% !important;
-    height: 100% !important;
-    position: absolute;
-    opacity: 0.2;
-    z-index: 1;
-  }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  .about-description {
-    z-index: 2;
-  }
-  .about-img-container {
-    width: 100% !important;
-    height: 100% !important;
-    position: absolute;
-    opacity: 0.2;
-    z-index: 1;
-    img {
-      width: 60%;
-      height: 60%;
+    .skills-list {
+      grid-template-columns: 1fr;
     }
   }
 }

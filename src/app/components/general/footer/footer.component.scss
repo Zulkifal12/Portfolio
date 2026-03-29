@@ -1,90 +1,157 @@
 @import "./../../../../variables.scss";
 
-footer{
-    color: $LightSlate;
+footer {
+  color: $LightSlate;
+  position: relative;
 
-    .footer-left-bar:after, .footer-right-bar:after{
-        content: '';
-        display: block;
-        width: 1px;
-        height: 90px;
-        margin: 0 auto;
-        background-color: $LightSlate;
+  .footer-left-bar:after,
+  .footer-right-bar:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0 auto;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(236, 183, 7, 0.55) 40%,
+      rgba(236, 183, 7, 0.2) 100%
+    );
+  }
+
+  .footer-left-bar li,
+  .footer-right-bar li {
+    list-style: none;
+  }
+
+  .footer-left-bar {
+    position: fixed;
+    bottom: -16px;
+    left: max(24px, 2.5vw);
+    padding: 0;
+    z-index: 5;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      border: 1px solid rgba(236, 183, 7, 0.42);
+      background: rgba(5, 7, 13, 0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+        0 4px 24px rgba(0, 0, 0, 0.45), 0 0 28px rgba(236, 183, 7, 0.12);
+      transition: border-color 0.2s ease, background-color 0.2s ease,
+        box-shadow 0.2s ease, transform 0.2s ease;
     }
 
-    .footer-left-bar li, .footer-right-bar li{
-        list-style: none;
+    a:hover {
+      border-color: rgba(236, 183, 7, 0.85);
+      background: rgba(236, 183, 7, 0.1);
+      box-shadow: 0 0 0 1px rgba(236, 183, 7, 0.2) inset,
+        0 6px 28px rgba(0, 0, 0, 0.5), 0 0 36px rgba(236, 183, 7, 0.22);
+      transform: translateY(-2px);
     }
 
-    .footer-left-bar{
-        position: fixed;
-        bottom: -16px;
-        left: 51px;
-        padding: 0;
-
-        i{
-            font-size: 19px;
-            color: $LightSlate;
-        }
-
-        li{
-            margin: 20px 0px;
-
-            &:last-of-type {
-                margin-bottom: 33px;
-            }
-        }
+    a:focus-visible {
+      border-color: rgba(236, 183, 7, 0.85);
+      background: rgba(236, 183, 7, 0.1);
+      box-shadow: 0 0 0 2px rgba(236, 183, 7, 0.5),
+        0 0 0 1px rgba(236, 183, 7, 0.2) inset, 0 6px 28px rgba(0, 0, 0, 0.5);
+      transform: translateY(-2px);
     }
 
-    .footer-right-bar{
-        position: fixed;
-        bottom: 0px;
-        right: 41px;
-        padding: 0;
-
-        li{
-            transform: rotate(90deg);
-        }
-
-        a{
-            font-family: $CodeFont;
-            font-size: 12px;
-            -webkit-letter-spacing: 0.1em;
-            -moz-letter-spacing: 0.1em;
-            -ms-letter-spacing: 0.1em;
-            letter-spacing: 0.1em;
-            -webkit-writing-mode: vertical-rl;
-            -ms-writing-mode: tb-rl;
-            writing-mode: vertical-rl;
-            margin: 20px auto;
-            padding: 10px;
-            color: $LightSlate;
-        }
+    i {
+      font-size: 22px;
+      color: $LightestSlate;
+      filter: drop-shadow(0 0 10px rgba(236, 183, 7, 0.35));
+      transition: color 0.2s ease, filter 0.2s ease, transform 0.2s ease;
     }
-    .footer-credits{
-        font-family: $CodeFont;
-        font-size: 12px;
-        line-height: 1;
-    
-        position: absolute;
-        margin: auto;
-        left: 0;
-        right: 0;
-        margin-top: -60px;
 
-        a{
-            color: $LightSlate;
-            -webkit-transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-            transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-            transition-property: all;
-            transition-duration: 0.25s;
-            transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-            transition-delay: 0s;
-
-            &:hover, &:focus {
-                text-decoration: none;
-                color: $Green;
-            }
-        }
+    a:hover i {
+      color: $Green;
+      filter: drop-shadow(0 0 14px rgba(236, 183, 7, 0.55));
+      transform: scale(1.06);
     }
+
+    a:focus-visible i {
+      color: $Green;
+      filter: drop-shadow(0 0 14px rgba(236, 183, 7, 0.55));
+      transform: scale(1.06);
+    }
+
+    li {
+      margin: 18px 0;
+
+      &:last-of-type {
+        margin-bottom: 33px;
+      }
+    }
+  }
+
+  .footer-right-bar {
+    position: fixed;
+    bottom: 0;
+    right: max(20px, 2vw);
+    padding: 0;
+    z-index: 5;
+
+    li {
+      transform: rotate(90deg);
+    }
+
+    a {
+      font-family: $CodeFont;
+      font-size: clamp(12px, 1.1vw, 14px);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      writing-mode: vertical-rl;
+      margin: 16px auto 24px;
+      padding: 14px 12px;
+      color: rgba(230, 241, 255, 0.95);
+      text-decoration: none;
+      text-shadow: 0 0 20px rgba(236, 183, 7, 0.45),
+        0 0 40px rgba(236, 183, 7, 0.15);
+      transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
+
+      &:hover {
+        color: $Green;
+        text-shadow: 0 0 24px rgba(236, 183, 7, 0.65),
+          0 0 48px rgba(236, 183, 7, 0.25);
+      }
+
+      &:focus-visible {
+        color: $Green;
+        text-shadow: 0 0 24px rgba(236, 183, 7, 0.65),
+          0 0 48px rgba(236, 183, 7, 0.25);
+        outline: 2px solid rgba(236, 183, 7, 0.65);
+        outline-offset: 6px;
+      }
+    }
+  }
+
+  .footer-credits {
+    font-family: $CodeFont;
+    font-size: 12px;
+    line-height: 1.4;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: -56px;
+
+    a {
+      color: $LightSlate;
+      transition: color 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $Green;
+      }
+    }
+  }
 }

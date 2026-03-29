@@ -31,19 +31,21 @@
             position: relative;
             padding: 2rem 1.75rem;
             height: 100%;
-            border-radius: 3px;
+            border-radius: 6px;
+            border: 1px solid $BorderSubtle;
             -webkit-transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
             transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-            background-color: $LightNavy;
+            background: linear-gradient(165deg, rgba(13, 20, 36, 0.95) 0%, rgba(5, 7, 13, 0.85) 100%);
             cursor: pointer;
 
             &:hover {
                 -webkit-transform: translateY(-5px);
                 -ms-transform: translateY(-5px);
                 transform: translateY(-5px);
+                border-color: rgba(236, 183, 7, 0.28);
             }
             &:hover, &:focus {
-                box-shadow: 0 20px 30px -15px rgba(2,12,27,0.7);
+                box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.6);
             }
 
             svg{

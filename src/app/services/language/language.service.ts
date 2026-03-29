@@ -1,33 +1,28 @@
 import { Injectable } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
-import { Location } from "@angular/common";
+import { Observable } from "rxjs";
+import { tap } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root",
 })
 export class LanguageService {
-  language: "es" | "en";
+  readonly language = "en" as const;
 
-  constructor(
-    public translateService: TranslateService,
-    private location: Location
-  ) {}
+  constructor(public translateService: TranslateService) {}
 
-  initLanguage() {
-    this.translateService.addLangs(["en", "es"]);
-    let language = navigator.language || (navigator as any).userLanguage;
-    language = "en";
-    this.translateService.setDefaultLang(language);
-
-    // Change the URL without navigate:
-    this.location.go(language);
-
-    this.language = language;
-  }
-
-  changeLanguage(language) {
-    this.translateService.setDefaultLang(language);
-    this.location.go(language);
-    this.language = language;
+  /**
+   * Lock app to English only (no browser-locale switching).
+   * Returns the observable from `use('en')` so APP_INITIALIZER can wait for `en.json`.
+   */
+  initLanguage(): Observable<unknown> {
+    this.translateService.addLangs(["en"]);
+    this.translateService.setDefaultLang("en");
+    return this.translateService.use("en").pipe(
+      tap(() => {
+        document.documentElement.lang = "en";
+        document.documentElement.setAttribute("translate", "no");
+      })
+    );
   }
 }

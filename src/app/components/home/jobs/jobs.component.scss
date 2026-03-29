@@ -5,6 +5,11 @@
 
   .tab-content {
     margin-left: 38px;
+    padding: 1.25rem 1.5rem;
+    border-radius: 6px;
+    border: 1px solid $BorderSubtle;
+    background: rgba(13, 20, 36, 0.5);
+    box-shadow: 0 16px 48px -28px rgba(0, 0, 0, 0.55);
   }
 
   ul {

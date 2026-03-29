@@ -32,16 +32,17 @@
                 color: $LightestSlate;
             }
             .proyect-description-box {
-                box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+                box-shadow: 0 16px 48px -24px rgba(0, 0, 0, 0.65);
                 -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
                 transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
                 position: relative;
                 z-index: 2;
                 padding: 25px;
-                background-color: $LightNavy;
+                background: linear-gradient(165deg, rgba(13, 20, 36, 0.98) 0%, rgba(5, 7, 13, 0.88) 100%);
+                border: 1px solid $BorderSubtle;
                 color: $LightSlate;
                 font-size: 18px;
-                border-radius: 3px;
+                border-radius: 6px;
             }
             .proyect-skills {
                 position: relative;
@@ -175,7 +176,7 @@
         .proyect-info-right .proyect-box,
         .proyect-info-left .proyect-box {
             padding: 20px;
-            background: #0a192fe3;
+            background: rgba(13, 20, 36, 0.94);
         }
     }
 }
@@ -191,37 +192,34 @@
 
 .img-container {
     width: 600px;
+    max-width: 100%;
+    height: 320px;
     max-height: 320px;
-    overflow: auto;
+    overflow: hidden;
     border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+
+    .img-feature-proyect,
+    img.img-feature-proyect {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+    }
 }
 
-
-/* width */
-
-::-webkit-scrollbar {
-    width: 7px;
+::ng-deep .proyects .owl-carousel-o .owl-stage-outer {
+    overflow: hidden;
 }
 
-
-/* Track */
-
- ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px #8892b0;
-    border-radius: 3px;
-}
-
-
-/* Handle */
-
- ::-webkit-scrollbar-thumb {
-    background: $Green;
-    border-radius: 3px;
-}
-
-
-/* Handle on hover */
-
- ::-webkit-scrollbar-thumb:hover {
-    background: $Green;
+/* Carousel image area only — avoid page-wide scrollbar styling */
+.img-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }

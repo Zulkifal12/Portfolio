@@ -1,43 +1,154 @@
 <section class="section banner">
-  <div [@bannerTrigger] class="container">
+  <div class="banner__glow" aria-hidden="true"></div>
+  <div class="banner__grid" aria-hidden="true"></div>
+
+  <div [@bannerTrigger] class="banner__container">
     <div class="section-box-banner">
-      <div class="content">
-        <div class="my-content">
-          <div>
-            <h1>Hello! My name is</h1>
-          </div>
-          <div class="banner-title">
-            <h2>Muhammad Zulkifal</h2>
-            <h3>Angular Developer</h3>
-          </div>
-          <div class="d-flex justify-content-between">
-            <div class="banner-description">
-              <p
-                [innerHTML]="'Banner.Description' | translate"
-                class="mt-4"
-              ></p>
+      <div class="content banner__layout">
+        <div class="banner__main">
+          <div class="my-content">
+            <p class="banner-eyebrow">{{ "Banner.Pretitle" | translate }}</p>
+            <div class="banner-title">
+              <h1 class="banner-name">Muhammad Zulkifal</h1>
+            </div>
+            <p class="banner-tagline">{{ "Banner.Tagline" | translate }}</p>
+            <p
+              class="banner-description"
+              [innerHTML]="'Banner.Description' | translate"
+            ></p>
+
+            <div class="banner-stats" aria-label="Highlights">
+              <div class="banner-stat">
+                <span class="banner-stat__value">{{
+                  "Banner.Stat1Value" | translate
+                }}</span>
+                <span class="banner-stat__label">{{
+                  "Banner.Stat1Label" | translate
+                }}</span>
+              </div>
+              <div class="banner-stat">
+                <span class="banner-stat__value">{{
+                  "Banner.Stat2Value" | translate
+                }}</span>
+                <span class="banner-stat__label">{{
+                  "Banner.Stat2Label" | translate
+                }}</span>
+              </div>
+              <div class="banner-stat">
+                <span class="banner-stat__value">{{
+                  "Banner.Stat3Value" | translate
+                }}</span>
+                <span class="banner-stat__label">{{
+                  "Banner.Stat3Label" | translate
+                }}</span>
+              </div>
+            </div>
+
+            <div class="banner-stack">
+              <p class="banner-stack__label">
+                {{ "Banner.StackLabel" | translate }}
+              </p>
+              <ul class="banner-stack__chips" *ngIf="techChips.length">
+                <li *ngFor="let chip of techChips">{{ chip }}</li>
+              </ul>
+            </div>
+
+            <div class="div-btn-banner">
+              <a
+                (click)="
+                  analyticsService.sendAnalyticEvent(
+                    'click_send_mail',
+                    'banner',
+                    'email'
+                  )
+                "
+                href="mailto:mzulkifaluetp@gmail.com"
+                class="main-btn"
+              >
+                {{ "Banner.ActionBtn" | translate }}
+              </a>
+              <a
+                (click)="
+                  analyticsService.sendAnalyticEvent(
+                    'click_view_projects',
+                    'banner',
+                    'projects_anchor'
+                  )
+                "
+                href="#proyects"
+                class="banner-btn-secondary"
+              >
+                {{ "Banner.SecondaryBtn" | translate }}
+              </a>
             </div>
           </div>
-          <div class="div-btn-banner">
-            <a
-              (click)="
-                analyticsService.sendAnalyticEvent(
-                  'click_send_mail',
-                  'banner',
-                  'email'
-                )
-              "
-              href="mailto:mzulkifaluetp@gmail.com"
-              target="_black"
-              class="main-btn"
-            >
-              {{ "Banner.ActionBtn" | translate }}
-            </a>
+        </div>
+
+        <aside class="banner__aside" aria-label="At a glance">
+          <div class="banner__aside-bg" aria-hidden="true"></div>
+
+          <div class="banner__terminal">
+            <div class="banner__terminal-bar">
+              <span class="banner__terminal-dots">
+                <span></span><span></span><span></span>
+              </span>
+              <span class="banner__terminal-filename">{{
+                "Banner.TerminalTitle" | translate
+              }}</span>
+            </div>
+            <div class="banner__terminal-body">
+              <p>
+                <span class="banner__code-kw">const</span>
+                <span class="banner__code-name"> stack</span>
+                <span class="banner__code-op"> = </span>
+                <span class="banner__code-br">[</span>
+              </p>
+              <p class="banner__code-indent">
+                <span class="banner__code-str">'Angular'</span
+                ><span class="banner__code-op">,</span>
+              </p>
+              <p class="banner__code-indent">
+                <span class="banner__code-str">'TypeScript'</span
+                ><span class="banner__code-op">,</span>
+              </p>
+              <p class="banner__code-indent">
+                <span class="banner__code-str">'PrimeNG'</span
+                ><span class="banner__code-op">,</span>
+              </p>
+              <p class="banner__code-indent">
+                <span class="banner__code-str">'AWS'</span
+                ><span class="banner__code-op">,</span>
+              </p>
+              <p class="banner__code-indent">
+                <span class="banner__code-str">'Tailwind'</span
+                ><span class="banner__code-op">,</span>
+              </p>
+              <p><span class="banner__code-br">]</span><span class="banner__code-op">;</span></p>
+              <p>
+                <span class="banner__code-kw">export const</span>
+                <span class="banner__code-name"> yearsExp</span>
+                <span class="banner__code-op"> = </span>
+                <span class="banner__code-num">4.5</span
+                ><span class="banner__code-op">;</span>
+                <span class="banner__code-cmt"> // shipping prod</span>
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="myimage">
-          <img src="../../../../assets/images/me/MyImage.jpg" alt="" />
-        </div>
+
+          <div class="banner__aside-card">
+            <div class="banner__aside-card-row">
+              <span class="banner__pulse" aria-hidden="true"></span>
+              <span class="banner__aside-badge">{{
+                "Banner.AsideBadge" | translate
+              }}</span>
+            </div>
+            <p class="banner__aside-meta">
+              {{ "Banner.AsideMeta" | translate }}
+            </p>
+          </div>
+
+          <p class="banner__aside-watermark" aria-hidden="true">MZ</p>
+        </aside>
       </div>
     </div>
   </div>

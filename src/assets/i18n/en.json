@@ -6,11 +6,37 @@
   "Header.cvBtn": "Resume",
   "Header.cvName": "Zulkifal's_CV.pdf",
   "Banner.Pretitle": "Hello! My name is",
+  "Banner.Tagline": "Full-stack Developer · Angular · TypeScript · Django",
+  "Banner.Stat1Value": "4.5+",
+  "Banner.Stat1Label": "Years shipping production web apps",
+  "Banner.Stat2Value": "Full-stack",
+  "Banner.Stat2Label": "Angular, TypeScript, PrimeNG & AWS",
+  "Banner.Stat3Value": "Quality",
+  "Banner.Stat3Label": "Clean architecture & maintainable UI",
+  "Banner.StackLabel": "Stack & tools I ship with",
+  "Banner.TechChips": [
+    "Angular",
+    "TypeScript",
+    "PrimeNG",
+    "AWS",
+    "Tailwind CSS",
+    "RxJS",
+    "NgRx",
+    "Micro frontends",
+    "Jest / unit tests",
+    "CI/CD",
+    "Docker",
+    "AG-Grid"
+  ],
   "Banner.ActionBtn": "Get in touch",
-  "Banner.Description": "A committed MEAN stack developer with <span class='underline'>2+ years of experience</span>  shaping systems, interfaces to elevate the digital realm. Proficient in <span class='underline'>Angular and Django</span> , my focus is on producing clean, reusable, and scalable code that adheres to best practices and development standards. My journey involves a passion for continuous improvement and innovation within the MEAN stack. Let's collaborate to create cutting-edge solutions and contribute to making the web a more dynamic and efficient space.",
+  "Banner.SecondaryBtn": "View selected work",
+  "Banner.TerminalTitle": "snapshot.ts",
+  "Banner.AsideBadge": "Open to new opportunities",
+  "Banner.AsideMeta": "Remote · Product-focused delivery",
+  "Banner.Description": "Full-stack developer with <span class='underline'>4.5+ years of experience</span> shipping web products end to end. I build with <span class='underline'>Angular</span>, TypeScript, <span class='underline'>PrimeNG</span>, and <span class='underline'>Tailwind</span> on the front end, and integrate with <span class='underline'>AWS</span> and cloud-ready services—clean architecture, reusable UI, and code that stays maintainable as teams and features grow. I care about performance, clarity, and solid engineering habits. If you’re hiring or want to collaborate on something ambitious, I’d love to hear from you.",
   "AboutMe.Title": "About me",
   "AboutMe.Paragraphs": [
-    "In my <span class='underline'>2+ years as a developer</span>, I sought to train every day. I specialize in <span class='underline'> Micro Frontend Technologies, Angular Custom Libraries </span>, and robust <span class='underline'> unit testing</span>. I seamlessly integrate continuous processes and have hands-on experience with Micro-Services backend.",
+    "Over <span class='underline'>4.5+ years as a developer</span>, I’ve focused on shipping reliable front ends and solid integrations with backend services. I specialize in <span class='underline'>micro frontends, Angular libraries</span>, and <span class='underline'>rigorous unit testing</span>, with hands-on experience on microservices-style backends.",
     "Beyond technical skills, I excel in leadership, fostering teamwork with empathy and motivation. My focus extends to system improvements, site optimization, and implementing innovative ideas that enhance project value. Let's collaborate to elevate projects in the dynamic realm of the MEAN stack and Micro-Services backend, pushing boundaries and delivering impactful solutions!",
     "Some of the technologies that I have trained and worked on include (but are not limited to):"
   ],
@@ -59,14 +85,54 @@
       "Title": "Independent",
       "Date": "March 2020 - Present",
       "Description": [
-        "Developed different website's for client's accross the world.",
-        "Design layout with HTML, CSS, SASS, Bootstrap, Angular Material's etc."
+        "Worked for Star Gallery Mart as an Angular developer, building an enterprise e-commerce platform: https://stargallery.org/en",
+        "Worked for Encoderbytes to develop financial indicators for the Saudi government.",
+        "Delivered many additional client projects end to end—marketing sites, dashboards, and product UIs—using Angular, HTML/CSS/SASS, Bootstrap, and Angular Material.",
+        "Collaborated with clients worldwide on requirements, iterations, and handover, often owning layout, components, and integration with APIs or CMS-style content."
       ]
     }
   ],
   "FeatureProjects.Title": "My Involvement in Ongoing and Completed Projects:",
   "FeatureProjects.Label": "Featured Project",
   "FeatureProjects.Projects": [
+    {
+      "Title": "Start Gallery Mart",
+      "Description": "A enterprise e-commerce platform built from the ground up, featuring <span class='underline'>micro-frontend technologies</span>, <span class='underline'>role-based settings</span>, and comprehensive <span class='underline'>user management</span>.",
+      "imgs": [
+        "assets/images/sgm/image1.png",
+        "assets/images/sgm/image2.png",
+        "assets/images/sgm/image3.png",
+        "assets/images/sgm/image4.png"
+      ],
+      "Technologies": [
+        "Angular 18",
+        "SSR",
+        "Prime NG",
+        "Tailwind CSS",
+        "Docker",
+        "AWS"
+        
+        ]
+    },
+    {
+      "Title": "Uurnik Connect",
+      "Description": "A next-generation AI Network Orchestrator application built from the ground up, featuring <span class='underline'>micro-frontend technologies</span>, <span class='underline'>role-based settings</span>, and comprehensive <span class='underline'>user management</span>.",
+      "imgs": [
+        "assets/images/Uurnik/image1.png",
+        "assets/images/Uurnik/image2.png",
+        "assets/images/Uurnik/image3.png",
+        "assets/images/Uurnik/image4.png"
+      ],
+      "Technologies": [
+        "Angular 19+",
+        "SSR",
+        "AWS",
+        "Prime NG",
+        "Tailwind CSS",
+        "Docker"
+      ]
+    },
+   
     {
       "Title": "E-Retail Point",
       "Description": "A Next Generation Cloud based E-Retail System application made from scratch with <span class='underline'>Micro Frontend Technologie's</span>, <span class='underline'>role based setting's</span> and <span class='underline'>user management</span>.",

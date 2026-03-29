@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { AnalyticsService } from "src/app/services/analytics/analytics.service";
 
 @Component({
   selector: "app-about",
@@ -7,7 +6,5 @@ import { AnalyticsService } from "src/app/services/analytics/analytics.service";
   styleUrls: ["./about.component.scss"],
 })
 export class AboutComponent implements OnInit {
-  constructor(public analyticsService: AnalyticsService) {}
-  angular = "Angular, React, Vue";
   ngOnInit(): void {}
 }

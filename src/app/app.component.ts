@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import * as AOS from "aos";
 import { Title, Meta } from "@angular/platform-browser";
-import { LanguageService } from "src/app/services/language/language.service";
 
 @Component({
   selector: "app-root",
@@ -13,12 +12,9 @@ export class AppComponent implements OnInit {
 
   constructor(
     private titleService: Title,
-    private metaService: Meta,
-    private languageService: LanguageService
+    private metaService: Meta
   ) {}
   ngOnInit(): void {
-    this.languageService.initLanguage();
-
     this.titleService.setTitle("Muhammad Zulkifal | Software Engineer");
     this.metaService.addTags([
       {

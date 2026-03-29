@@ -33,13 +33,8 @@ export class ProyectsComponent implements OnInit {
 
   }
 
-debug(){
-
-  this.imgContainer.nativeElement.scroll({
-    top: this.imgContainer.nativeElement.scrollHeight,
-    left: 0,
-    behavior: 'smooth',    
-  });
+debug() {
+  /* Image area no longer uses scroll; kept for template binding compatibility */
 }
 
 }

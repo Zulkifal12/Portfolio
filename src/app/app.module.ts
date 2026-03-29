@@ -1,5 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { NgModule, APP_INITIALIZER } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -14,11 +14,15 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 import {
   TranslateLoader,
   TranslateModule,
-  TranslateService,
 } from "@ngx-translate/core";
+import { LanguageService } from "./services/language/language.service";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
+}
+
+export function appLanguageInitializer(lang: LanguageService) {
+  return () => lang.initLanguage();
 }
 
 @NgModule({
@@ -34,6 +38,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     NgxGoogleAnalyticsModule.forRoot(environment.trackAnalyticID),
     TranslateModule.forRoot({
+      defaultLanguage: "en",
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
@@ -41,7 +46,14 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
     }),
   ],
-  providers: [TranslateService],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: appLanguageInitializer,
+      deps: [LanguageService],
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
